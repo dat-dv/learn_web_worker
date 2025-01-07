@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="box-border">
+    <div class="mt-10">
+        <div class="flex flex-row gap-2 justify-around">
+            <!-- Main Thread Computation -->
+            <div class="items-center">
+                <div class="flex flex-col gap-2">
+                    <button id="heavyComputation"
+                        class="h-[40px] w-[220px] min-w-fit bg-gray-400/10 hover:bg-white items-center hover:border border-solid border-gray-200 rounded-lg px-4 py-2">
+                        Calc Heavy Computation
+                    </button>
+                    <label class="flex items-center gap-2">
+                        <input type="checkbox" id="useSetTimeout">
+                        <span>With setTimeout</span>
+                    </label>
+                </div>
+                <ul class="mt-10 max-h-[calc(100vh-250px)] overflow-auto" id="result"></ul>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-l border-l-gray-500 h-[calc(100vh-150px)]"></div>
+
+            <!-- Web Worker Computation -->
+            <div class="items-center">
+                <button id="heavyComputationWithWorker"
+                    class="h-[40px] w-[320px] min-w-fit bg-gray-400/10 hover:bg-white items-center hover:border border-solid border-gray-200 rounded-lg px-4 py-2">
+                    Calc Heavy Computation With Worker
+                </button>
+                <ul class="mt-10 max-h-[calc(100vh-250px)] overflow-auto" id="workerResult"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

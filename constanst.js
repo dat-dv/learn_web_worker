@@ -1,0 +1,1 @@
+export const TIME_COMPLEXITY = 10_000_000;
